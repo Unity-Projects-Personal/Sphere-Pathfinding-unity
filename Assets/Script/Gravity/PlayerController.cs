@@ -15,8 +15,6 @@ public class PlayerController : MonoBehaviour
     }
     void FixedUpdate()
     {
-
         rb.MovePosition(rb.position + transform.TransformDirection(move_dir) * move_speed * Time.deltaTime);
-
     }
 }

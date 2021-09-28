@@ -15,7 +15,6 @@ public class Pathfinding : MonoBehaviour
     {
         Node startNode = startPos;
         Node endNode = targetPos;
-
         List<Node> openSet = new List<Node>();
         HashSet<Node> closedSet = new HashSet<Node>();
         openSet.Add(startNode);
@@ -49,6 +48,7 @@ public class Pathfinding : MonoBehaviour
                 }
 
                 int newCostToNeighbour = node.g_cost + GetDistance(node, neighbour);
+
                 if (newCostToNeighbour < neighbour.g_cost || !openSet.Contains(neighbour))
                 {
                     neighbour.g_cost = newCostToNeighbour;
@@ -60,6 +60,7 @@ public class Pathfinding : MonoBehaviour
                 }
             }
         }
+
         return null;
     }
 
@@ -67,7 +68,6 @@ public class Pathfinding : MonoBehaviour
     {
         Stack<Node> path = new Stack<Node>();
         Node currentNode = endNode;
-
         grid.path = new List<Node>();
 
         while (currentNode != startNode)
@@ -86,6 +86,7 @@ public class Pathfinding : MonoBehaviour
 
         if (dstX > dstY)
             return 14 * dstY + 10 * (dstX - dstY);
+
         return 14 * dstX + 10 * (dstY - dstX);
     }
 }

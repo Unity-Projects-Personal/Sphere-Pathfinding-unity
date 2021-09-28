@@ -5,18 +5,12 @@ using UnityEngine;
 public class Node
 {
     public bool walkable;
-
     public Vector3 world_pos;
     public Node parent;
-
-
     public int g_cost;
     public int h_cost;
-
     public int i;
-
     public int j;
-
     public Node(bool walkable, Vector3 world_pos, int i, int j)
     {
         this.walkable = walkable;

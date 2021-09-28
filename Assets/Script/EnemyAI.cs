@@ -25,7 +25,6 @@ public class EnemyAI : MonoBehaviour
     {
         if (my_node == null)
         {
-
             my_node = grid.grid[new Vector2(10, 19)];
             my_transform.transform.position = my_node.world_pos;
         }
@@ -50,7 +49,6 @@ public class EnemyAI : MonoBehaviour
                 path = pathfinding.FindPath(my_node, grid.player_node);
             }
         }
-
     }
 
     void OnDrawGizmos()

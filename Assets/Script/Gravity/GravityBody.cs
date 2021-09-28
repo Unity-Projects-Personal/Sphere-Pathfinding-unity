@@ -6,9 +6,7 @@ public class GravityBody : MonoBehaviour
 {
     public GravityAttractor planet_attractor;
     Transform my_transform;
-
     Rigidbody rb;
-
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -16,7 +14,6 @@ public class GravityBody : MonoBehaviour
         rb.useGravity = false;
         my_transform = transform;
     }
-
     void Update()
     {
         planet_attractor.Attract(my_transform);
